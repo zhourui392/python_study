@@ -10,9 +10,9 @@ python3 manage.py runserver 8080
 
 pip3 install pymysql
 错误处理：
-···
+```
 mysqlclient 1.3.13 or newer is required; you have 0.9.3
-···
+```
 https://stackoverflow.com/questions/55657752/django-installing-mysqlclient-error-mysqlclient-1-3-13-or-newer-is-required
 
 

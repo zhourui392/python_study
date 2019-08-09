@@ -13,7 +13,20 @@ def testdb(request):
         aa = request.GET["aa"]
         question = Question(question_text=aa, pub_date=datetime.now())
         question.save()
+    print(aa + "_id is " + str(question.id))
+
+    # get
     question = Question.objects.get(id=1)
-    print(question.question_text)
+
+    # update
+    question.question_text = datetime.now().strftime("%H:%M:%S")
+    question.save()
+
+    # delete
+    question = Question(question_text="10086", pub_date=datetime.now())
+    question.save()
+    print("10086_id is "+str(question.id))
+    question.delete()
+
     resp = {'errorcode': 100, 'detail': '数据添加成功！'}
     return HttpResponse(json.dumps(resp), content_type="application/json")

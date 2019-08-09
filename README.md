@@ -22,3 +22,6 @@ python3 manage.py makemigrations polls
 生成表结构
 python3 manage.py sqlmigrate polls 0001
 
+访问链接：
+http://127.0.0.1:8000/polls/testdb?aa=345
+
